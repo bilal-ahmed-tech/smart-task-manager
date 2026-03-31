@@ -1,18 +1,54 @@
-# React + Vite
+# Smart Task Manager ✅
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured task management app built with React.js and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+[View Live](#) ← replace with Vercel link after deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Add, edit and delete tasks
+- Filter tasks by status (pending, in-progress, completed)
+- Search tasks by title and description
+- Sort tasks by due date and priority
+- Overdue task highlighting
+- Undo delete and status changes
+- LocalStorage persistence (data saved on refresh)
+- Responsive design
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Tailwind CSS
+- React Router
+- Context API
+- LocalStorage
+
+---
+
+## 🧠 Concepts Applied
+
+- Custom hooks (useTaskStats)
+- useMemo & useCallback for performance
+- Reusable components
+- PropTypes validation
+- Constants pattern
+- Lazy useState initializer
+
+---
+
+## 📦 Run Locally
+```bash
+git clone https://github.com/bilal-ahmed-tech/smart-task-manager.git
+cd smart-task-manager
+npm install
+npm run dev
+```
+
+---
+
+Made with ❤️ by Bilal Ahmed
