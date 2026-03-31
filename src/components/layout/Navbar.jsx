@@ -7,8 +7,8 @@ export default function Navbar() {
   const pendingCount = tasks.filter((t) => t.status === STATUS.PENDING).length;
   const linkClass = ({ isActive }) =>
     isActive
-      ? "text-blue-600 font-semibold text-sm md:text-base"
-      : "text-gray-600 hover:text-blue-500 text-sm md:text-base";
+      ? "text-blue-600 font-semibold md:text-base"
+      : "text-gray-600 hover:text-blue-500 md:text-base";
 
   return (
     <nav className="bg-white shadow-md sticky top-0">
@@ -20,12 +20,12 @@ export default function Navbar() {
               alt="Logo"
               width={32}
               height={32}
-              className="w-6 h-6 md:w-8 md:h-8 mr-2"
+              className="w-8 md:h-8 mr-2"
             />
             <span className="hidden sm:inline">Smart Task Manager</span>
           </div>
         </Link>
-        <div className="flex sm:gap-6 gap-2">
+        <div className="flex gap-6">
           <NavLink to="/" className={linkClass}>
             Dashboard
           </NavLink>

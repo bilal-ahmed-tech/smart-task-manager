@@ -6,7 +6,7 @@ const Button = ({
   disabled,
   type = "button",
 }) => {
-  const baseClass = "px-4 py-2 rounded-lg cursor-pointer font-medium transition";
+  const baseClass = "sm:px-4 py-2 px-2 rounded-lg cursor-pointer font-medium transition";
   const variantClass = {
     primary: "bg-blue-600 text-white hover:bg-blue-700",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",

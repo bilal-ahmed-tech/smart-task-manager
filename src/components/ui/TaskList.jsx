@@ -8,7 +8,6 @@ const TaskList = ({ tasks, onDelete }) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  
   if (tasks.length === 0) {
     return (
       <EmptyState
@@ -41,7 +40,7 @@ const TaskList = ({ tasks, onDelete }) => {
                 }`}>
                 <Link
                   to={`/tasks/${task.id}`}
-                  className={`font-medium flex-1 transition ${
+                  className={`sm:font-medium text-sm flex-1 transition ${
                     isOverdue
                       ? "text-red-900"
                       : "text-gray-800 hover:text-blue-600"
@@ -54,9 +53,11 @@ const TaskList = ({ tasks, onDelete }) => {
                   )}
                 </Link>
 
-                <div className="flex gap-2 items-center">
-                  <Badge type={task.priority} />
-                  <Badge type={task.status} />
+                <div className="sm:flex gap-2  items-center">
+                  <div className="sm:flex gap-2 hidden">
+                    <Badge type={task.priority} />
+                    <Badge type={task.status} />
+                  </div>
                   <button
                     onClick={() => onDelete(task.id)}
                     className="ml-4 p-2 text-gray-800 hover:text-red-600 transition-colors">
@@ -72,16 +73,17 @@ const TaskList = ({ tasks, onDelete }) => {
   );
 };
 TaskList.propTypes = {
- tasks: PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string, // Not required (tasks can have empty description)
-    dueDate: PropTypes.string.isRequired,
-    status: PropTypes.oneOf(['pending', 'in-progress', 'completed']).isRequired,
-    priority: PropTypes.oneOf(['low', 'medium', 'high']).isRequired,
-  })
-).isRequired,
+  tasks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string, // Not required (tasks can have empty description)
+      dueDate: PropTypes.string.isRequired,
+      status: PropTypes.oneOf(["pending", "in-progress", "completed"])
+        .isRequired,
+      priority: PropTypes.oneOf(["low", "medium", "high"]).isRequired,
+    }),
+  ).isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 

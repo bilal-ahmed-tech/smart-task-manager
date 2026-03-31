@@ -9,7 +9,7 @@ export default function TaskDetail() {
   const task = tasks.find((t) => t.id === Number(id));
 
   const getNextStatus = (status) => {
-    if (status === STATUS.PENDING) return STATUS.IN_PROGRESS
+    if (status === STATUS.PENDING) return STATUS.IN_PROGRESS;
     if (status === STATUS.IN_PROGRESS) return STATUS.COMPLETED;
     return null;
   };
@@ -64,12 +64,14 @@ export default function TaskDetail() {
           </div>
           <div>
             <p className="text-xs text-gray-400 mb-1">Created At</p>
-            <p className="text-sm font-medium text-gray-700">{task.createdAt}</p>
+            <p className="text-sm font-medium text-gray-700">
+              {task.createdAt}
+            </p>
           </div>
         </div>
 
         {/* Status update button */}
-        <div className="mt-8 pt-6  border-t border-gray-100 flex gap-3">
+        <div className="mt-8 pt-6  border-t border-gray-100 flex justify-center  flex-wrap gap-3">
           <button
             onClick={() => nextStatus && updateTaskStatus(task.id, nextStatus)}
             disabled={!nextStatus}
@@ -82,7 +84,9 @@ export default function TaskDetail() {
             {getButtonLabel(task.status)}
           </button>
           <button
-            onClick={() => navigate(`/tasks/${task.id}/edit` , { replace: true })}
+            onClick={() =>
+              navigate(`/tasks/${task.id}/edit`, { replace: true })
+            }
             className="px-6 py-2 rounded-lg cursor-pointer font-medium border border-gray-300 text-gray-600 hover:bg-gray-50 transition">
             ✏️ Edit Task
           </button>

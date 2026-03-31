@@ -72,12 +72,12 @@ export default function Tasks() {
       </div>
 
       {/* Filter Buttons */}
-      <div className="flex gap-2 mt-6">
+      <div className="flex sm:justify-start justify-center flex-wrap gap-2 mt-3">
         {["all", "pending", "in-progress", "completed"].map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
-            className={`px-4 py-2 rounded-lg cursor-pointer text-sm font-medium transition capitalize
+            className={`px-4 py-2 rounded-lg  cursor-pointer text-sm font-medium transition capitalize
             ${
               filter === f
                 ? "bg-blue-600 text-white"
