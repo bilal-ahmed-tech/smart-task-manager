@@ -3,7 +3,7 @@
 A full-featured task management app built with React.js and Tailwind CSS.
 
 ## 🌐 Live Demo
-[View Live](#) ← replace with Vercel link after deployment
+[View Live](https://smart-task-manager-eta-three.vercel.app/)t
 
 ---
 
