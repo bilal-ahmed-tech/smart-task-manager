@@ -288,13 +288,7 @@ Detailed view of individual task with all metadata and action options
 
 Task creation and editing form with validation and priority selection
 <img src="screenshots/TaskForm.png" width="100%" alt="Task form for creation and editing" />
-<br/><br/>
-
-### Responsive Design — Mobile View
-
-Mobile-optimized layout with touch-friendly navigation and controls
-<img src="screenshots/Mobileview.png" width="100%" alt="Mobile responsive design" />
-
+<br/>
 ---
 
 ## 💡 Usage Guide
