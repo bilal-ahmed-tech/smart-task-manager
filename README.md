@@ -293,7 +293,7 @@ Task creation and editing form with validation and priority selection
 ### Responsive Design — Mobile View
 
 Mobile-optimized layout with touch-friendly navigation and controls
-<img src="screenshots/Mobile.png" width="100%" alt="Mobile responsive design" />
+<img src="screenshots/Mobileview.png" width="100%" alt="Mobile responsive design" />
 
 ---
 
